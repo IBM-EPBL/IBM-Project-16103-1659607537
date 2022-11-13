@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: rgb(39, 37, 37);
+    box-shadow:0 1px 4px rgb(104, 104, 104);
+    z-index: 100;
+    background-color: white;
+}
+.carty{
+    color: #ff8400;
+    height: 2rem;
+    width: 2rem;
+    background-color: #ffffff;
+    margin-top: 1.5rem;
+}
+
+.nav{
+    
+    
+    display: flex;
+    background-color: white;
+    
+}
+.logo{
+    margin-top: .01rem;
+    height: 6rem;
+    width : 6rem;
+    background-color: white;
+
+}
+.options{
+    margin-left: 18rem;
+    display: flex;
+    height: 6rem;
+    width : 35rem;
+    background-color: rgb(255, 255, 255);
+
+}
+.home1{
+   
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: #222222;
+    background-color: white;
+
+}
+.home1:hover{
+   
+   border-bottom: 5px solid #ff8400 ;
+   color: #ff8400;
+}
+.load{
+    display:flex;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    max-width: 1080px;
+    height: 760px;
+    overflow-x: auto;
+    gap: 5rem;
+}
+.home{
+    position: relative;
+    min-height: 460px;
+    width: 1080px;
+    display: flex;
+    align-items: center;
+    margin-top:5rem !important;
+    border-radius: 0.5rem;
+    margin-left: 0rem;
+    
+
+}
+.text2{
+    transform: rotate(270deg);
+    font-size: 4rem;
+    color: #303030;
+    margin-left: -6rem;
+    position: sticky;
+}
+.home-img{
+    position: absolute;
+    width: 960px;
+    height:400px;
+    z-index: 0;
+    object-fit:fill;
+    border-radius: 2rem;
+    margin-left: 8rem;
+}
+.home-text{
+    padding-left: 40px;
+    z-index: 1;
+    background: none;
+    margin-left: -7rem;
+    color: rgb(255, 242, 0);
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+.home-title{
+    font-size:3rem;
+    font-weight: 600;
+    z-index: 1;
+    background: none;
+    text-shadow: 0px 0px 15px #b2b2b2;
+    
+    
+}
+.home-text p{
+    font-size:1rem;
+    margin: 6px 0 20px;
+    color:rgb(0, 255, 208);
+    z-index: 1;
+    background: none;
+}
+.watch-btn{
+    display:flex;
+    column-gap: 0.8rem;
+    color: rgb(0, 255, 204);
+    z-index: 1;
+    background: none;
+    margin-bottom:2rem;
+    background-color: #ff0f0f;
+}
+.watch-btn .bx{
+    font-size: 21px;
+    background-color: #66b29a;
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    z-index: 1;
+    background-color: #66b29a;
+    margin-bottom:2rem;
+}
+
+
+#cart-icon{
+    font-size: 3rem;
+    cursor:pointer;
+    width: 4rem;
+    height:4rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+    padding: 7px;
+}
+#cart-icon:hover{
+    color: #ff8400;
+    background-color: #ff840013;
+    border-radius: 50%;
+}
+
+.watch-btn .bx:hover{
+    background-color: #66b29a64;
+    border-radius: 50%;
+}
+span{
+    background: none;
+    z-index: 1;
+}
+.title{
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 250;
+    margin-bottom:.5rem;
+    margin-top: .8rem;
+    margin-left: 1rem;
+    color: #252525;
+    font-family: 'Roboto Slab', serif;
+    background-color: white;
+    
+}
+.shop{
+    margin-top: 1rem;
+}
+.section-title1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    color: #3c3c3c;
+    rotate: 23;
+    border-left: 6px solid #3c3c3c;
+    padding-left: 1rem;
+
+}
+.section-title{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: #444444;
+
+}
+.shop-content{
+    display:flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 100rem;
+    height: 30rem;
+    overflow-x: auto;
+    gap: 2rem;
+    
+}
+.product-box{
+    width: 14rem;
+    height:27rem ;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 25px;
+    position: relative;
+    
+    
+}
+.product-box:hover{
+    padding: 11px 11px 11px 11px;
+    border: 3px solid #393939 ;
+   
+
+    transition: 0.4s;
+    border-radius: 15px;
+    height: 27rem;
+}
+
+.product-img{
+    width:12rem;
+    height:18rem ;
+    border-radius: 12px;
+    object-fit:cover;
+   
+    overflow: hidden;
+
+    
+
+
+}
+.product-title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    color: rgb(62, 62, 62);
+    background-color: #25252500;
+
+}
+
+.add-cart{
+    position: absolute;
+
+    bottom:0.3rem;
+    right: 0.3rem;
+    background:#f3efef ;
+    color: rgb(78, 77, 77);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    border: #f3efef00;
+    
+}
+.pnam{
+    height:5rem;
+    width:13rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+.ppri{
+    color: rgb(85, 85, 85);
+    background-color: rgba(255, 255, 255, 0);
+    bottom:0.7rem;
+    left: 0.4rem;
+    height: 2rem;
+    width: 10rem;
+}
+.gg{
+    margin-top: 0.2rem;
+}
+.web{
+    position: absolute;
+    width: 50px; 
+    height:50px;
+    left:0.6rem;
+    bottom: 0.3rem;
+    border-radius: 34%;
+}
+.add-cart:hover{
+    background-color: rgb(36, 36, 36);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+::-webkit-scrollbar{
+    width: 0px;
+}

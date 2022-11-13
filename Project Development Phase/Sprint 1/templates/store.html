@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Page</title>
+    <link rel="stylesheet" href="static/css/MHstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <img src="/static/img/Triangle logo no bg.png" class="logo">
+                <h2 class="title">TAILORED</h2>
+        <div class="options">
+            <a href="/logout"><h2 class="home1">LOGOUT</h2></a>
+            <a href="home"><h2 class="home1">CONTACT US</h2></a>
+            <a class="shopping-bag">
+                <i class='bx bxs-shopping-bag' id="cart-icon"></i>
+            </a>
+        </div>
+        </div>
+    </header>
+   
+    <!--home-->
+    <section class="home container" id="home">
+        <h4  class="text2">Upcoming</h4>
+        <img src="https://test1234ii.s3.jp-tok.cloud-object-storage.appdomain.cloud/main.jpg" alt="" class="home-img">
+        
+    </section>
+    
+</div>
+
+            <section class="shop container">
+                <h2 class="section-title1">Top Floral Collection</h2>
+                <!--content-->
+                <div class="shop-content">
+                   
+                {% for product in productsa %}
+                <form method="post" action="/add">
+                <div class="product-box">
+                    <img src="{{ product.PIMAGE }}" alt="" class="product-img">
+                    <div class="pnam">
+                        <h2 class="product-title">{{ product.PNAME }}</h2>
+                    </div>
+                    
+                    <div class="ppri">
+                    <h3 class="gg">₹{{ product.PPRICE }}</h3>
+                    </div>
+                    <button type="submit" class="add-cart">Add to Cart</a>
+                </div>
+                </form>
+                {% endfor %}
+            </div>
+                
+            </section>
+            <section class="shop container">
+                <h2 class="section-title1">Top Pant Collection</h2>
+                <!--content-->
+                <div class="shop-content">
+                   
+                {% for product in pant %}
+                <form method="post" action="/add">
+                <div class="product-box">
+                    <img src="{{ product.PIMAGE }}" alt="" class="product-img">
+                    <div class="pnam">
+                        <h2 class="product-title">{{ product.PNAME }}</h2>
+                    </div>
+                    
+                    <div class="ppri">
+                    <h3 class="gg">₹{{ product.PPRICE }}</h3>
+                    </div>
+                    <button type="submit" class="add-cart">Add to Cart</a>
+                </div>
+                </form>
+                {% endfor %}
+            </div>
+                
+            </section>
+    
+</body>
+</html>
