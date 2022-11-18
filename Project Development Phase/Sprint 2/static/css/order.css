@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+}
+table{
+    border: 2px solid rgb(35, 35, 35);
+    border-collapse:collapse;
+    
+}
+td{
+    font-size: .8rem;
+    color: rgb(82, 82, 82);
+    border-bottom: 2px solid rgb(77, 77, 77);
+    margin-top: .5rem;
+    border-right: 2px solid rgb(77, 77, 77);
+    padding-left: .5rem;
+}
+th{
+    font-size: 1.3rem;
+    color: rgb(32, 32, 32);
+    border-bottom: 2px solid rgb(29, 29, 29);
+    border-right: 2px solid rgb(77, 77, 77);
+
+}
+tr:hover{
+    border: 2px solid black;
+    background-color: rgb(198, 225, 249);
+    border-radius:4px ;
+    color: rgb(34, 34, 34);
+}

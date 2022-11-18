@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Page</title>
+    <link rel="stylesheet" href="static/css/cart.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    
+    
+    <header>
+        <div class="nav container">
+            <img src="/static/img/Triangle logo no bg.png" class="logo">
+                <h2 class="title">TAILORED</h2>
+        <div class="options">
+            <a href="/logout"><h2 class="home1">LOGOUT</h2></a>
+            <a href="home"><h2 class="home1">CONTACT US</h2></a>
+            <a class="shopping-bag" href="store">
+                <i class='bx bx-x' id="cart-icon"></i>
+            </a>
+        </div>
+        </div>
+    </header>
+   
+    <!--home-->
+    
+
+
+            <section class="shop container">
+                <h2 class="section-title1" style="margin-top: 5srem;">Items</h2>
+                <!--content-->
+                <div class="shop-content">
+                   
+                {% for product in carts %}
+                <form method="post" action="/delete" class="fot">
+                <div class="product-box">
+                    <img src="{{ product.PIMAGE }}" alt="" class="product-img">
+                    <div class="pnam">
+                        <h2 class="product-title">{{ product.PNAME }}</h2>
+                        <span>{{product.PCAT}}</span>
+                    </div>
+                    <input type="hidden" name="PID" value="{{product.PID}}">
+                    <input type="hidden" name="total" value="{{total}}">
+                    <input type="hidden" name="prod" value="{{pro}}">
+                    <div class="ppri">
+                    <h3 class="gg">₹ {{ product.PPRICE }}</h3>
+                    </div>
+                    <button type="submit" class="add-cart">Delete</a>
+                </div>
+                </form>
+                {% endfor %}
+            </div>
+            </section>
+            
+            <div class="foot">
+                <h4>Total = ₹ {{total}}</h4>
+            </div>
+            <form action="/order" method="post" class="addr">
+                <h2 class="section-title1" style="margin-top: 6.5rem;">Address</h2>
+                <input type="text" maxlength="25" name="name" id="name" class="ret" placeholder="Fullname" style=" width:16rem;" required>
+                <input type="text" maxlength="8" name="hno" id="name"class="ret" placeholder="House No" style="width: 8rem;margin-left: 1rem;" required><br>
+                <input type="text" maxlength="20" name="area" id="name"class="ret" placeholder="Area" style="width: 25.3rem;" required><br>
+                <input type="text" maxlength="15" name="city" id="name"class="ret" placeholder="City" style="width: 13rem;" required>
+                <input type="text" maxlength="15" name="state" id="name"class="ret" placeholder="State" style="width: 11rem;margin-left: 1rem;" required >
+                <div style="display:flex;">
+                <h2 style="padding-top: .3rem; width: 4rem;height: 3rem;border: 2px solid rgb(85, 85, 85);margin-left: 3rem;border-radius: 8px;margin-top:1rem;padding-left: .5rem;">+91</h2>
+                <input type="hidden" name="total" value="{{total}}">
+                <input type="hidden" name="prod" value="{{pro}}">
+                <input type="number" name="mno" id="name"class="ret" placeholder="Mobile Number" style="width: 20.4rem;margin-left: 1rem;" required><br>
+            </div>
+            <div style="display: flex;">
+            <i class='bx bx-error-circle' style="font-size: 1.5rem;color:rgb(80, 79, 79);margin-left:3rem;margin-top: 1rem;"></i>
+            <h5 style="font-size: 1rem; color:rgb(80, 80, 80);margin-left:.5rem;margin-top: 1rem;">Only Cash on Delivery Available</h5>
+        </div>
+
+
+        <button type="submit" class="addtocart">Place Order</a>
+            </form>
+            
+</body>
+
+</html>
