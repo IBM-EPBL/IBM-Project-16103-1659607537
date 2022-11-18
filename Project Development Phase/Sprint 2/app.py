@@ -89,6 +89,7 @@ def register():
             ibm_db.bind_param(prep_stmt,4,cart)
             ibm_db.execute(prep_stmt)
             msg='Registered Successfully !'
+            teamid="PNT2022TMID37167"
             msg = Message('Hello', sender = 'abcdef@gmail.com', recipients =[EMAIL])
             msg.body = "Hello "+USERNAME+" You have Succefully Registered in Tailored"
             mail.send(msg)
@@ -130,6 +131,7 @@ def cart():
                 tem=[]
                 sql="SELECT * FROM PRODUCT WHERE PID=?"
                 stmt=ibm_db.prepare(conn,sql)
+                teamid="PNT2022TMID37167"
                 ibm_db.bind_param(stmt,1,id)
                 ibm_db.execute(stmt)
                 tem=ibm_db.fetch_assoc(stmt)
@@ -189,6 +191,7 @@ def store():
         stmt=ibm_db.exec_immediate(conn,sql)
         rowse=ibm_db.fetch_assoc(stmt)
         while rowse != False:
+            teamid="PNT2022TMID37167"
             pants.append(rowse)
             rowse = ibm_db.fetch_assoc(stmt)
         print(rows)
@@ -215,6 +218,7 @@ def delete():
         stmt=ibm_db.prepare(conn,insql)
         ibm_db.bind_param(stmt,1,carte)
         ibm_db.bind_param(stmt,2,USERNAME)
+        teamid="PNT2022TMID37167"
         ibm_db.execute(stmt)
     return cart()
 
