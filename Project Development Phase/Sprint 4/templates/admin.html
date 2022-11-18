@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0px;
+            background-color: rgb(39, 37, 37);
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: rgb(39, 37, 37);
+    box-shadow:0 1px 4px rgba(235, 221, 221, 0.1);
+    z-index: 100;
+}
+
+
+.nav{
+    
+    
+    display: flex;
+    
+}
+.tri{
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+    color: #2effb9;
+    margin-left: 2rem;
+
+}
+.home{
+   
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: 2rem;
+    margin-left: 13rem;
+    color: #ffffff;
+
+}
+.sub_btn:hover{
+   
+   border: 2px solid #2effb9;
+   background-color:#163229 ;
+   border-radius: 8px;
+
+}
+.title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+    margin-left: 14rem;
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <form action="/ustock" method="post" style="margin-bottom: 3rem;">
+        <button type="submit" class="update" style="margin-right:4rem;">Click here to Update Stock List</button>
+    </form><br>
+    <div class="mb-5" style="padding: 25px; border: 3px solid #ffffff; border-radius: 28px; margin-top: 4rem;height: 30rem;width: 33rem;background-color: #ffffff;">
+        <h3 style="font-size: 3rem;color:rgb(43, 43, 43)">Add product</h3>
+        <form action="/additem" method="post">
+        
+            <div class="msg" style="font-size:20px; width:30rem;height: 2rem;color:rgb(43, 41, 41);">{{ msg }}</div>
+
+        <br>
+        <input type="text" placeholder="    Product ID" name="PD" id="PD" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: .5rem;" required>
+        <input type="text" placeholder="    Product Name" name="PN" id="PN" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: .5rem;" required>
+        <input type="text" placeholder="    Product Price" name="PP" id="PP" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: .5rem;" required>
+        <input type="text" placeholder="    Product Image URL" name="PM" id="PM" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: .5rem;" required>
+        <input type="text" placeholder="    Product Category" name="PC" id="PC" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: .5rem;" required>
+        <input type="text" placeholder="    Stock" name="stoc" id="stoc" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: .5rem;" required>
+        
+        <button type="submit" id="sub_btn" style="margin-left: 6.7rem;font-size: 25px; margin-top: 1.2rem; color:rgb(255, 255, 255);background-color:rgb(68, 68, 68);border: none; border-radius: 7px;height: 3rem;width: 15rem;align-items: center;">ADD Item</button>
+         <br>
+         
+        </form> 
+        </div>
+    
+
+</body>
+</html>

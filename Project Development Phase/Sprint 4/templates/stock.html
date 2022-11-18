@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+        *{
+            background-color: rgb(39, 37, 37);
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+        header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: rgb(39, 37, 37);
+    box-shadow:0 1px 4px rgba(235, 221, 221, 0.1);
+    z-index: 100;
+}
+body{
+    background-color: rgb(39, 37, 37);
+}
+.mbd{
+    
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+    margin-top: 10rem;
+}
+
+.nav{
+    
+    
+    display: flex;
+    
+}
+.tri{
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+    color: #2effb9;
+    margin-left: 2rem;
+
+}
+.home{
+   
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: 2rem;
+    margin-left: 13rem;
+    color: #ffffff;
+
+}
+.sub_btn:hover{
+   
+   border: 2px solid #2effb9;
+   background-color:#163229 ;
+   border-radius: 8px;
+
+}
+.title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+    margin-left: 14rem;
+    color: #ffffff;
+}
+.opp:hover{
+    text-decoration: none;
+    border-bottom: 4px solid white;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+
+}
+    </style>
+</head>
+
+<body>
+    <div style="background-color: rgba(248, 96, 96, 0);margin-left: 1rem;margin-top: 0.1rem; height: 4rem;display: flex;">
+    
+        <h3 Style="color: #ffffff;margin-left: 1rem;height:5rem;font-size: 4rem;font-family: 'Roboto Slab', serif;border-left: 6px solid #ffffff;padding-left: 1rem;margin-top: 1rem;">TAILORED</h3>         
+    </div>
+    <div class="mbd" style="padding: 25px; border: 3px solid #ffffff; border-radius: 28px; margin-top: 3rem;height: 25rem;width: 33rem;background-color: #ffffff;">
+            <h3 style="font-size: 3rem;color:rgb(43, 43, 43);background-color: #ffffff;">Update Stock</h3>
+        <form action="/updatestock" method="post" style="background-color: rgba(39, 37, 37, 0);">
+            <div class="msg" style="font-size:20px; width:30rem;height: 1rem;color:rgb(43, 41, 41);background-color: #2effb900;">{{ msg }}</div>
+        <br>
+        <input type="text" placeholder="    Product ID" name="pid" id="pid" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: 1rem;background-color: #fff;" required>     
+        <input type="text" placeholder="    extra stock" name="sno" id="sno" style="width: 27rem;height: 2.5rem;border-radius: 10px;border: 2px solid rgb(43, 41, 41);margin-bottom: 1rem;background-color: #fff;" required>
+        
+        <button type="submit" id="sub_btn" style="margin-left: 6.7rem;font-size: 25px; margin-top: 2.9rem; color:rgb(255, 255, 255);background-color:rgb(41, 41, 41);border: none; border-radius: 7px;height: 3rem;width: 15rem;align-items: center;">update</button>
+         <br>
+        </form> 
+    </div>
+    
+
+</body>
+</html>
