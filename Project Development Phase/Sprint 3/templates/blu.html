@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK Shirt and BlUE pant</title>
+    <link rel="stylesheet" href="static/css/temp.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <img src="/static/img/Triangle logo no bg.png" class="logo">
+                <h2 class="title">TAILORED</h2>
+        <div class="options">
+            <a href="/logout"><h2 class="home1">LOGOUT</h2></a>
+            <a href="home"><h2 class="home1">CONTACT US</h2></a>
+            <a class="shopping-bag" href="cart">
+                <i class='bx bxs-shopping-bag' id="cart-icon"></i>
+            </a>
+        </div>
+        </div>
+    </header>
+    <section class="shop container">
+        <h2 class="section-title1">BLUE AND BLACK</h2>
+        <!--content-->
+        <div class="shop-content">
+        <form method="post" action="/addcart" id="todo-form">
+        <div class="product-box">
+            <img src="https://test1234ii.s3.jp-tok.cloud-object-storage.appdomain.cloud/product2.jpg" alt="" class="product-img">
+            <div class="pnam">
+                <h2 class="product-title">Blue SHIRT</h2>
+            </div>
+            <input type="hidden" name="PID" value="2">
+            <div class="ppri">
+            <h3 class="gg">₹999</h3>
+            </div>
+            <button type="submit" class="add-cart">Add to Cart</button>
+        </div>
+        </form>
+        <form method="post" action="/addcart" id="todo-form">
+            <div class="product-box">
+                <img src="https://test1234ii.s3.jp-tok.cloud-object-storage.appdomain.cloud/product11.webp" alt="" class="product-img">
+                <div class="pnam">
+                    <h2 class="product-title">Black CHINOS</h2>
+                </div>
+                <input type="hidden" name="PID" value="11">
+                <div class="ppri">
+                <h3 class="gg">₹1999</h3>
+                </div>
+                <button type="submit" class="add-cart">Add to Cart</button>
+            </div>
+        </form>
+    </div>
+        
+    </section>
+</body>
+</html>
