@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="static/css/order.css">
+    
+</head>
+<body>
+    <script>
+        function printdev(){
+            var divele=document.getElementById("printable").innerHTML;
+            var oldpage=document.body.innerHTML;
+            document.body.innerHTML="<html><head><title></title><body>"+divele+"</body>";
+            window.print();
+            document.body.innerHTML=oldpage;
+        }
+    </script>
+    <form action="/update" method="post" style="margin-bottom: 3rem;">
+        <button type="submit" class="update">Update Order Status</button>
+    </form>
+    <button onclick="printdev()">Print the List</button><br>
+    <div id="printable">
+    <table>
+        <tr>
+            <th style="width:6rem;border-right: 2px solid rgb(77, 77, 77);">Order Id</th>
+            <th style="width: 17rem ;">Products</th>
+            <th style="width:35rem ;">Address</th>
+            <th style="width: 8rem;">Bill Amount</th>
+            <th style="width: 5rem;">Status</th>
+        </tr>
+        {% for order in orders%}
+        <tr>
+            <td>{{order.OID}}</td>
+            <td>{{order.PRODUCTS}}</td>
+            <td>{{order.ADDRESS}}</td>
+            <td style="font-family: times;">₹{{order.TOTAL}}</td>
+            <td>{{order.STATUS}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

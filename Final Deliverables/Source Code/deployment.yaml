@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tailoredapp
+  labels:
+    app: tailoredapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tailoredapp
+  template:
+    metadata:
+      labels:
+        app: tailoredapp
+    spec:
+      containers:
+      - name: tailoredapp
+        image: tharunm2002/tailoredfinal
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000

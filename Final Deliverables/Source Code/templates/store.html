@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Page</title>
+    <link rel="stylesheet" href="static/css/MHstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <div class="nav container">
+            <img src="/static/img/Triangle logo no bg.png" class="logo">
+                <h2 class="title">TAILORED</h2>
+        <div class="options">
+            <div class="home12"><h2 class="ii">Welcome</h2><h2 class="iii">{{names}}</h2></div>
+            <a href="/logout"><h2 class="home1">LOGOUT</h2></a>
+            <a href="aboutus"><h2 class="home1">About us</h2></a>
+            <a class="shopping-bag" href="cart">
+                <i class='bx bxs-shopping-bag' id="cart-icon"></i>
+            </a>
+        </div>
+        </div>
+    </header>
+   
+    <!--home-->
+    <section class="home container" id="home">
+        <h4  class="text2">Upcoming</h4>
+        <img src="https://test1234ii.s3.jp-tok.cloud-object-storage.appdomain.cloud/main.jpg" alt="" class="home-img">
+        
+    </section>
+    
+</div>
+
+            <section class="shop container">
+                <h2 class="section-title1">Top Floral Collection</h2>
+                <!--content-->
+                <div class="shop-content">
+                   
+                {% for product in productsa %}
+                <form method="post" action="/addcart" id="todo-form">
+                <div class="product-box">
+                    <img src="{{ product.PIMAGE }}" alt="" class="product-img">
+                    <div class="pnam">
+                        <h2 class="product-title">{{ product.PNAME }}</h2>
+                    </div>
+                    <input type="hidden" name="PID" value="{{product.PID}}">
+                    <div class="ppri">
+                    <h3 class="gg">₹{{ product.PPRICE }}</h3>
+                    </div>
+                    <button type="submit" class="add-cart">Add to Cart</button>
+                </div>
+                </form>
+                {% endfor %}
+            </div>
+                
+            </section>
+            <section class="shop container">
+                <h2 class="section-title1">Top Pant Collection</h2>
+                <!--content-->
+                <div class="shop-content">
+                   
+                {% for product in pant %}
+                <form method="post" action="/addcart" id="todo-form">
+                <div class="product-box">
+                    <img src="{{ product.PIMAGE }}" alt="" class="product-img">
+                    <div class="pnam">
+                        <h2 class="product-title">{{ product.PNAME }}</h2>
+                    </div>
+                    <input type="hidden" name="PID" value="{{product.PID}}">
+                    <div class="ppri">
+                    <h3 class="gg">₹{{ product.PPRICE }}</h3>
+                    </div>
+                    <button type="submit" class="add-cart">Add to Cart</a>
+                </div>
+                </form>
+                {% endfor %}
+            </div>
+                
+            </section>
+            <section class="shop container">
+                <h2 class="section-title1">Top Foot Wear Collection</h2>
+                <!--content-->
+                <div class="shop-content">
+                   
+                {% for product in foot %}
+                <form method="post" action="/addcart" id="todo-form">
+                <div class="product-box">
+                    <img src="{{ product.PIMAGE }}" alt="" class="product-img">
+                    <div class="pnam">
+                        <h2 class="product-title">{{ product.PNAME }}</h2>
+                    </div>
+                    <input type="hidden" name="PID" value="{{product.PID}}">
+                    <div class="ppri">
+                    <h3 class="gg">₹{{ product.PPRICE }}</h3>
+                    </div>
+                    <button type="submit" class="add-cart">Add to Cart</a>
+                </div>
+                </form>
+                {% endfor %}
+            </div>
+                
+            </section>
+            <script>
+                window.watsonAssistantChatOptions = {
+                  integrationID: "9080e66a-181f-4b68-91cc-cfe3ba8ae0ac", // The ID of this integration.
+                  region: "au-syd", // The region your integration is hosted in.
+                  serviceInstanceID: "4a1fae03-3fba-4e33-98bb-ee088b405143", // The ID of your service instance.
+                  onLoad: function(instance) { instance.render(); }
+                };
+                setTimeout(function(){
+                  const t=document.createElement('script');
+                  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+                  document.head.appendChild(t);
+                });
+              </script> 
+</body>
+</html>
